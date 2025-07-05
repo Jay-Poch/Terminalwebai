@@ -30,4 +30,5 @@ def shorter(promt: str):
 
 #print(base(modell, "some testing please respond short"))
 if __name__ == "__main__":
-    app.run(debug=True) 
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
